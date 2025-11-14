@@ -54,7 +54,7 @@ These are the settings for Global Settings:
 26. Vulkan/OpenGL present method: Auto
 ```
 
-In NVIDIA App go to Graphics and in Global Settings:
+In NVIDIA App go to Graphics and in Global Settings
 
 ```bash
 1. DLSS Override - Model Presets: Latest
