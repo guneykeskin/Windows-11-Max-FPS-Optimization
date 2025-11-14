@@ -188,7 +188,7 @@ Memory Clock: +1300
 
 # Process Lasso
 
-Install it then tick/do these:
+Install Process Lasso then tick/do these:
 
 ```bash
 1. Main > Manage Processes of All Users
