@@ -139,7 +139,7 @@ Choose the one with the lowest ms, for me its 8.8.8.8.
 
 Go to Network Connections and double click the connection you use.
 Then go to properties, from there go to IPv4 settings.
-Then tick "Use the following DNS setver addresses:
+Then tick "Use the following DNS setver addresses".
 
 Since its 8.8.8.8 for me, here is what I wrote:
 
@@ -148,7 +148,7 @@ Preferred DNS server: 8.8.8.8
 Alternate DNS server: 8.8.4.4
 ```
 
-Run cmd as admin then find your max MTU with this:
+Run cmd as admin then find your max MTU with this, try until it doesnt give you any loss:
 ```bash
 ping google.com -f -l [MTU]
 ```
