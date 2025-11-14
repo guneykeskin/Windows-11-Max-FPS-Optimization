@@ -81,31 +81,30 @@ Then you should disable and stop all these services:
 4. Connected User Experience and Telemetry Service
 5. Parental Control
 6. AssignedAccessManager Service
-7. BitLocker Drive Encryption Service
-8. Geolocation Service
-9. GameDVR and Broadcast User Service
-10. Netlogon
-11. MapsBroker
-12. Phone Service
-13. Print Spooler
-14. Remote Desktop Configuration
-15. Remote Desktop Services
-16. Sensor Service
-17. Smart Card
-18. Smart Card Device Enumeration Service
-19. Smart Card Removal Policy
-20. Windows Biometric Service
-21. Windows Search
-22. Windows Error Reporting Service
-23. Work Folders
-24. Xbox Accessory Management Service
-25. Xbox Live Auth Manager
-26. Xbox Live Game Save
-27. Xbox Live Networking Service
-28. WalletService
-29. Windows Mobile Hotspot Service
-30. TCP/IP NetBIOS Helper
-31. SysMain
+7. Geolocation Service
+8. GameDVR and Broadcast User Service
+9. Netlogon
+10. MapsBroker
+11. Phone Service
+12. Print Spooler
+13. Remote Desktop Configuration
+14. Remote Desktop Services
+15. Sensor Service
+16. Smart Card
+17. Smart Card Device Enumeration Service
+18. Smart Card Removal Policy
+19. Windows Biometric Service
+20. Windows Search
+21. Windows Error Reporting Service
+22. Work Folders
+23. Xbox Accessory Management Service
+24. Xbox Live Auth Manager
+25. Xbox Live Game Save
+26. Xbox Live Networking Service
+27. WalletService
+28. Windows Mobile Hotspot Service
+29. TCP/IP NetBIOS Helper
+30. SysMain
 ```
 
 Then press Win+R and write "msconfig" in there and run it.
