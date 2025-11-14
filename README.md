@@ -8,11 +8,11 @@ Before doing anything creating restore point is reccomended.
 
 In settings do these:
 
+```bash
 Hardware accelerated GPU scheduling: On
-
 Hz for your monitor: Max avaliable
-
 Enable Dark mode.
+```
 
 ## Unnecesarry and Bloatware
 
@@ -25,6 +25,7 @@ Go to NVIDIA Control Panel and tick Use the advanced 3D image settings and click
 
 These are the settings for Global Settings:
 
+```bash
 1. Image Sharpening: Sharpening Off
 2. Ambient Occlusion: Off
 3. Anisotropic filtering: Off
@@ -51,11 +52,14 @@ These are the settings for Global Settings:
 24. Vertical sync: Off
 25. Virtual Realiyu pre-rendered frames: 1
 26. Vulkan/OpenGL present method: Auto
+```
 
 In NVIDIA App go to Graphics and in Global Settings:
 
+```bash
 1. DLSS Override - Model Presets: Latest
 2. DLSS Override - Super Resolution Mode: Ultra Performance
+```
 
 Go to turn on or off Windows features, then turn off everything else than the two .Net Framework's.
 Install raphire debloat from this [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
@@ -69,6 +73,8 @@ Go to task manager and disable everything in Startup Apps.
 Press Win+R and write "services.msc" in there and run it.
 
 Then you should disable and stop all these services:
+
+```bash
 1. Diagnostic Service Host
 2. Diagnostic System Host
 3. Diagnostic Execution Service
@@ -100,13 +106,17 @@ Then you should disable and stop all these services:
 29. Windows Mobile Hotspot Service
 30. TCP/IP NetBIOS Helper
 31. SysMain
+```
 
 Then press Win+R and write "msconfig" in there and run it.
 Then go to Services and tick "Hide all microsoft services", then Disable All.
 
 Go to Keyboard Properties and set these:
+
+```bash
 Repeat delay: Short
 Repeat rate: Fast
+```
 
 Go to Power operation settings and set Power mode to Max Performance
 Apply.
@@ -115,6 +125,8 @@ Apply.
 
 Use admin CMD to find your DNS with the lowest ms.
 There will be two DNS covered in this tutorial. So here is the two command to run:
+
+```bash
 ping 8.8.8.8
 
 Minimum = ms, Maximum = ms, Average = ms
@@ -122,24 +134,35 @@ Minimum = ms, Maximum = ms, Average = ms
 ping 1.1.1.1
 
 Minimum = ms, Maximum = ms, Average = ms
+```
 
 Choose the one with the lowest ms, for me its 8.8.8.8.
+
 Go to Network Connections and double click the connection you use.
 Then go to properties, from there go to IPv4 settings.
 Then tick "Use the following DNS setver addresses:
 
 Since its 8.8.8.8 for me, here is what I wrote:
+
+```bash
 Preferred DNS server: 8.8.8.8
 Alternate DNS server: 8.8.4.4
+```
 
 Run cmd as admin then find your max MTU with this:
+```bash
 ping google.com -f -l [MTU]
+```
 
 Then set it:
+```bash
 netsh int ipv4 set subinterface “Ethernet” mtu=MTU store=persistent
+```
 
 For me its 1500 so:
+```bash
 netsh int ipv4 set subinterface “Ethernet” mtu=1500 store=persistent
+```
 
 # SSD:
 Go to Control Panel > Power Options > Choose what the power buttons do
@@ -150,19 +173,25 @@ From there click "Change settings that are currently unavailable" and untick "Tu
 Install MSI Afterburner then click on that windows icon to make sure that overclock applys after restart.
 Then go to settings, and choose your GPU at the top. Then tick these:
 
+```bash
 Use third party
 Unlock voltage control
 Unlock voltage monitoring
 Force constant voltage
+```
 
 Then set the max overclock you can do, for me:
+
+```bash
 Core Clock: +200
 Memory Clock: +1300
+```
 
 # Process Lasso
 
 Install it then tick/do these:
 
+```bash
 1. Main > Manage Processes of All Users
 2. Main > Active Power Profile > Choose Highest Performance
 3. Main > ProBalance Enabled
@@ -177,6 +206,7 @@ Install it then tick/do these:
 12. Options > Power > Performance Mode > Change Power Profile when Engaged
 13. Options > Power > Performance Mode > Enable Automatic Detection (e.g, Steam)
 14. Options > Power > Performance Mode > Disable IdleSaver while Performance Mode Engaged
+```
 
 # Regedit
 
