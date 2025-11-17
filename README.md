@@ -11,7 +11,7 @@ In settings do these:
 ```bash
 Hardware accelerated GPU scheduling: On
 Hz for your monitor: Max avaliable
-Enable Dark mode.
+Game Mode: Enabled
 ```
 
 ## Unnecesarry and Bloatware
@@ -266,3 +266,18 @@ rBAR - Size Limit                        0x0000000040000000
 ```
 
 This makes sure that Resizable Bar is enabled.
+
+# Power Plan
+
+Run these command in order in cmd admin:
+
+```bash
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+```
+
+# Dont Forget
+
+While Hardware is important Software is a huge part of performance.
+
+**Make sure you keep your GPU driver up-to-date!**
