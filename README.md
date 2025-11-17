@@ -113,6 +113,8 @@ Then you should disable and stop all these services:
 28. Windows Mobile Hotspot Service
 29. TCP/IP NetBIOS Helper
 30. SysMain
+31. Remote Registery
+32. Background Intelligent Transfer Service
 ```
 
 Then press Win+R and write "msconfig" in there and run it.
@@ -229,3 +231,38 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Direct3D\MaxPreRenderedFrames = 1
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\SystemResponsiveness = 10
 ```
+
+We still have to do one more regit optimization.
+Open cmd, then enter this command:
+
+```bash
+ipconfig
+```
+
+Then note the IPv4 adress from the result,
+
+Now run regedit and get in this directory:
+
+```bash
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces
+```
+
+Then chech every folder and find the one that has the same IPv4 that you noted as DchpIPAdress.
+Create a new DWORD (32-bit) Value and rename it "TCPAckFrequency".
+Create a new DWORD (32-bit) Value and rename it "TCPNoDelay".
+
+Set "TCPAckFrequency" to 1 as Hexadecimal.
+Set "TCPNoDelay"" to 1 as Hexadecimal.
+
+# NVIDIA Profile Inspector
+
+Install NVIDIA Profile Inspector, then set these values to values shown:
+
+```bash
+[5 - Common]
+rBAR - Enable                            Enabled
+rBAR - Options                           0x00000001 (Returnal, Red Dead Redemption 2)
+rBAR - Size Limit                        0x0000000040000000
+```
+
+This makes sure that Resizable Bar is enabled.
