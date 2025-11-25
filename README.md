@@ -1,33 +1,37 @@
 ### Windows-11-Max-FPS-Optimization
 
 Windows 11 Max FPS Optimization
-
 This settings will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
 
-Before doing anything creating restore point is reccomended.
+Before doing anything creating restore point is recommended.
 
 In settings do these:
 
 ```bash
 Hardware accelerated GPU scheduling: On
-Hz for your monitor: Max avaliable
+Monitor Hz: Max avaliable
 Game Mode: Enabled
 ```
 
-## Unnecesarry and Bloatware
+## Unnecesarry & Bloatware & Optimization
 
-Go to Task Schedular and disable everything that you dont need.
+# Task Scheduler
+Run Task Scheduler, enter Task Scheduler Library and disable everything that you dont need by right clicking on them and choosing "Disable".
+
+# Useless Services
 
 Press Win+R and write msconfig and run.
 Then go to Services and tick "Hide all Microsoft services".
 Then untick everything you dont use.
 
+# Unnecessary protection
 Disable Memory Integrity in Settings.
 
+# Unnecessary Visual Effects and Virtual Memory
 Go to View advanced system settings and go to Advanced Tab, from there go to Performance and there in Visual Effects choose adjust for best performance.
-
 Then go to Advanced Tab from there and go to Virtual Memory, from there untick the tick in the top and choose custom size and write Max and Min size as 16000.
 
+# NVIDIA Settings
 Install NVIDIA App, from there update GPU driver and go to Settings and disable overlay and game filters and photo mode.
 Go to NVIDIA Control Panel and tick Use the advanced 3D image settings and click Take me there.
 
@@ -69,7 +73,10 @@ In NVIDIA App go to Graphics and in Global Settings
 2. DLSS Override - Super Resolution Mode: Ultra Performance
 ```
 
+# Useless Windows Features
 Go to turn on or off Windows features, then turn off everything else than the two .Net Framework's.
+
+# Debloat
 Install raphire debloat from this [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
 
 Then, replace everything inside Appslist.txt inside the folder that was installed with the "Appslist.txt" in this repository.
@@ -117,14 +124,21 @@ Then you should disable and stop all these services:
 32. Background Intelligent Transfer Service
 ```
 
-Then press Win+R and write "msconfig" in there and run it.
-Then go to Services and tick "Hide all microsoft services", then Disable All.
-
+# Keyboard Latency
 Go to Keyboard Properties and set these:
 
 ```bash
 Repeat delay: Short
 Repeat rate: Fast
+```
+
+# Power Plan
+
+Run these command in order in cmd admin:
+
+```bash
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
 ```
 
 Go to Power operation settings and set Power mode to Max Performance
@@ -207,14 +221,15 @@ Install Process Lasso then tick/do these:
 4. Options > General > Manage Processes of All Users
 5. Options > General > Refresh Interval (GUI) > 5 seconds
 6. Options > General > Refresh Interval (Governor) > 5 seconds
-7. Options > CPU > ProBalance > Enable ProBalance
-8. Options > CPU > ProBalance > Do Not Act on Foreground Process
-9. Options > CPU > ProBalance > Do Not Act on Children of the Foreground Process
-10. Options > CPU > ProBalance > Do Not Act on Processes of Non-Normal Priority
-11. Options > CPU > ProBalance > Do Not Act on Services
-12. Options > Power > Performance Mode > Change Power Profile when Engaged
-13. Options > Power > Performance Mode > Enable Automatic Detection (e.g, Steam)
-14. Options > Power > Performance Mode > Disable IdleSaver while Performance Mode Engaged
+7. Main > SmartTrim Enabled
+8. Options > CPU > ProBalance > Enable ProBalance
+9. Options > CPU > ProBalance > Do Not Act on Foreground Process
+10. Options > CPU > ProBalance > Do Not Act on Children of the Foreground Process
+11. Options > CPU > ProBalance > Do Not Act on Processes of Non-Normal Priority
+12. Options > CPU > ProBalance > Do Not Act on Services
+13. Options > Power > Performance Mode > Change Power Profile when Engaged
+14. Options > Power > Performance Mode > Enable Automatic Detection (e.g, Steam)
+15. Options > Power > Performance Mode > Disable IdleSaver while Performance Mode Engaged
 ```
 
 # Regedit
@@ -267,16 +282,12 @@ rBAR - Size Limit                        0x0000000040000000
 
 This makes sure that Resizable Bar is enabled.
 
-# Power Plan
+## Deep Tweaks
 
-Run these command in order in cmd admin:
+This time we will get into **Deep Tweaks**.
 
-```bash
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
-```
 
-# Dont Forget
+# ⚠️ Do not Forget ⚠️
 
 While Hardware is important Software is a huge part of performance.
 
