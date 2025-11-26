@@ -290,6 +290,12 @@ Then turn it into .bat file and run it as adminastator, wait for gpedit to downl
 
 Press Win+R and write gpedit.msc and run.
 
+Then go to this path and do what is told:
+
+```bash
+Computer Configuration → Administrative Templates → Windows Components → Windows Update → Configure Automatic Updates → Enabled → Notify for download
+```
+
 # NVIDIA Profile Inspector
 
 Install NVIDIA Profile Inspector, then set these values to values shown:
