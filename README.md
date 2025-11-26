@@ -247,6 +247,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games\Priority = 6, GPU Priority = 8, Scheduling Category = High, SFIO Priority = High
 HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Direct3D\MaxPreRenderedFrames = 1
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\SystemResponsiveness = 10
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
 ```
 
 We still have to do one more regit optimization.
@@ -270,6 +271,24 @@ Create a new DWORD (32-bit) Value and rename it "TCPNoDelay".
 
 Set "TCPAckFrequency" to 1 as Hexadecimal.
 Set "TCPNoDelay"" to 1 as Hexadecimal.
+
+# Local Group Policy Editor
+If you use Windows 11 Home Edition, gpedit will not be installed. If you have gpedit installed, skip this. To install gpedit paste this in a .txt file:
+
+```bash
+@echo off
+pushd "%~dp0"
+ 
+dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt
+dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt
+ 
+for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+pause
+```
+
+Then turn it into .bat file and run it as adminastator, wait for gpedit to download and when it installs restart your computer.
+
+Press Win+R and write gpedit.msc and run.
 
 # NVIDIA Profile Inspector
 
