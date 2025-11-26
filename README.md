@@ -293,7 +293,7 @@ Press Win+R and write gpedit.msc and run.
 Then go to this path and do what is told:
 
 ```bash
-Computer Configuration → Administrative Templates → Windows Components → Windows Update → Configure Automatic Updates → Enabled → Notify for download
+Computer Configuration → Administrative Templates → Windows Components → Windows Update → Manage end user experience → Configure Automatic Updates → Enabled → Notify for download
 ```
 
 # NVIDIA Profile Inspector
