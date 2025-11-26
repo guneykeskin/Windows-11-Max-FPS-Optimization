@@ -274,10 +274,26 @@ Set "TCPNoDelay"" to 1 as Hexadecimal.
 Install NVIDIA Profile Inspector, then set these values to values shown:
 
 ```bash
+### NVIDIA Profile Inspector ###         Base Profile
+
+[2 - Sync and Refresh]
+Ultra Low Latency - CPL State            Ultra
+Ultra Low Latency - Enabled              On
+
+[3 - Antialiasing]
+Antialiasing - FXAA Enabled (predefined by NVIDIA) Disallowed
+Antialiasing - Gamma Correction          Off
+
+[4 - Texture Filtering]
+Anisotropic Filtering - Mode             User-defined / Off
+Texture Filtering - Negative LOD bias    Clamp
+Texture Filtering - Quality              High performance
+
 [5 - Common]
 rBAR - Enable                            Enabled
 rBAR - Options                           0x00000001 (Returnal, Red Dead Redemption 2)
 rBAR - Size Limit                        0x0000000040000000
+Shader Cache - Cache Size                Unlimited
 ```
 
 This makes sure that Resizable Bar is enabled.
@@ -286,6 +302,32 @@ This makes sure that Resizable Bar is enabled.
 
 This time we will get into **Deep Tweaks**.
 
+# MSI Utility v3
+
+Install MSI Utility v3, then do these:
+
+Find your gpu, and tick "msi". Then set interrupt priority to "High".
+If you have NVME SSD, find NVME controller and set it's priority to "Normal".
+Find your Network Controller, then set interrupt priority to "Low".
+
+# Disabling PCIe Native Power Manegement
+
+Press Win+R and write regedit, then run.
+
+Do these:
+
+```bash
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
+Create DWORD (32-bit) Value named "EnableASPM" and set it to 0
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PnP\Pci]
+Create DWORD (32-bit) Value named "InterruptSteeringDisabled" and set it to 1
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
+Create DWORD (32-bit) Value named "MaximumPayloadSize" and set it to 512
+
+All of these numbers should be Hexadecimal values.
+```
 
 # ⚠️ Do not Forget ⚠️
 
