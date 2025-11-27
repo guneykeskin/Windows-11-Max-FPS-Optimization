@@ -8,14 +8,14 @@
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Basic Optimization](#basic-optimization)
-  - [Task Scheduler](##task-scheduler)
-  - [Services](##services)
+  - [Task Scheduler](#task-scheduler)
+  - [Services](#services)
 - [NVIDIA Optimization](#nvidia-optimization)
 - [Debloating Windows](#debloating-windows)
-- [Latency & Accuracy](#latency-&-accuracy)
-- [Power & Network Settings](#power-&-network-&-ssd-settings)
+- [Latency & Accuracy](#latency--accuracy)
+- [Power & Network & SSD Settings](#power--network--ssd-settings)
 - [Deep Tweaks](#deep-tweaks)
-- [Warning](##⚠-warning-⚠)
+- [Warning](#warning)
 
 ## Introduction
 This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
