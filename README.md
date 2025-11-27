@@ -126,13 +126,25 @@ Then you should disable and stop all these services:
 32. Background Intelligent Transfer Service
 ```
 
-## Keyboard Latency
+## Keyboard and Mouse Latency & Accuracy
 Go to Keyboard Properties and set these:
 
 ```bash
 Repeat delay: Short
 Repeat rate: Fast
 ```
+
+Then apply.
+
+Go to Mouse Properties > Pointer Options > Motion and set this:
+
+```bash
+Enhance pointer precision: Off
+```
+
+Then apply.
+
+Install your mouse software and set your polling rate to max.
 
 ## Power Plan
 
