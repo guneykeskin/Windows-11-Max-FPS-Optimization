@@ -4,35 +4,50 @@
 [![GPU](https://img.shields.io/badge/GPU-NVIDIA-green)](https://www.nvidia.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Basic Optimization](#basic-optimization)
+  - [Task Scheduler](#task-scheduler)
+  - [Services](#useless-services)
+- [NVIDIA Optimization](#nvidia-settings)
+- [Debloating Windows](#useless-windows-features)
+- [Power & Network Settings](#power-plan)
+- [Deep Tweaks](#deep-tweaks)
+- [Warning](#-do-not-forget-)
+
+## Introduction
 This settings will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
 
 Before doing anything creating restore point is recommended.
 
+## Basic Optimization
+
 In settings do these:
 
 ```bash
-Hardware accelerated GPU scheduling: On
-Monitor Hz: Max avaliable
-Game Mode: Enabled
+1. Hardware accelerated GPU scheduling: On
+2. Monitor Hz: Max avaliable
+3. Game Mode: Enabled
 ```
 
-# Unnecesarry & Bloatware & Optimization
+## Unnecesarry & Bloatware & Optimization
 
 We will disable unnecessary stuff and do optimization.
 
-## Task Scheduler
+### 1. Task Scheduler
 Run Task Scheduler, enter Task Scheduler Library and disable everything that you dont need by right clicking on them and choosing "Disable".
 
-## Useless Services
+### 2. Useless Services
 
 Press Win+R and write msconfig and run.
 Then go to Services and tick "Hide all Microsoft services".
 Then untick everything you dont use.
 
-## Unnecessary protection
+### 3. Unnecessary protection
 Disable Memory Integrity in Settings.
 
-## Unnecessary Visual Effects and Virtual Memory
+### 4. Unnecessary Visual Effects and Virtual Memory
 Run View advanced system settings and go to:
 
 ```bash
@@ -57,7 +72,7 @@ Maximum Size: 16000
 
 Then click Set, OK and Apply in order.
 
-## NVIDIA Settings
+### 5. NVIDIA Settings
 Install NVIDIA App, from there update GPU driver and go to Settings and disable overlay and game filters and photo mode.
 Go to NVIDIA Control Panel and tick Use the advanced 3D image settings and click Take me there.
 
@@ -99,10 +114,10 @@ In NVIDIA App go to Graphics and in Global Settings
 2. DLSS Override - Super Resolution Mode: Ultra Performance
 ```
 
-## Useless Windows Features
+### 6. Useless Windows Features
 Go to turn on or off Windows features, then turn off everything else than the two .Net Framework's.
 
-## Debloat
+### 7. Debloat
 Install raphire debloat from this [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
 
 Then, replace everything inside Appslist.txt inside the folder that was installed with the "Appslist.txt" in this repository.
@@ -110,7 +125,7 @@ Then, replace everything inside Appslist.txt inside the folder that was installe
 Then run "Run.bat" inside it and go disable/delete everything you can that is bloatware.
 Go to task manager and disable everything in Startup Apps.
 
-# Disabling services:
+### 8. Disabling services:
 Press Win+R and write "services.msc" in there and run it.
 
 Then you should disable and stop all these services:
@@ -195,7 +210,7 @@ Center Taskbar Items
 
 Then click on Run Tweaks and do Disk Cleanup.
 
-## Keyboard and Mouse Latency & Accuracy
+### 9. Keyboard and Mouse Latency & Accuracy
 Go to Keyboard Properties and set these:
 
 ```bash
@@ -215,7 +230,7 @@ Then apply.
 
 Install your mouse software and set your polling rate to max.
 
-## Power Plan
+### 10. Power Plan
 
 Run these command in order in cmd admin:
 
@@ -229,7 +244,7 @@ powercfg.exe /setactive SCHEME_CURRENT
 Go to Power operation settings and set Power mode to Max Performance
 Apply.
 
-## Network Settings:
+### 11. Network Settings
 
 Use admin CMD to find your DNS with the lowest ms.
 There will be two DNS covered in this tutorial. So here is the two command to run:
@@ -272,11 +287,11 @@ For me its 1500 so:
 netsh int ipv4 set subinterface “Ethernet” mtu=1500 store=persistent
 ```
 
-## SSD:
+### 12. SSD
 Go to Control Panel > Power Options > Choose what the power buttons do
 From there click "Change settings that are currently unavailable" and untick "Turn on fast startup"
 
-## MSI Afterburner
+### 13. MSI Afterburner
 
 Install MSI Afterburner then click on that windows icon to make sure that overclock applys after restart.
 Then go to settings, and choose your GPU at the top. Then tick these:
@@ -295,7 +310,7 @@ Core Clock: +200
 Memory Clock: +1300
 ```
 
-## Process Lasso
+### 14. Process Lasso
 
 Install Process Lasso then tick/do these:
 
@@ -317,7 +332,7 @@ Install Process Lasso then tick/do these:
 15. Options > Power > Performance Mode > Disable IdleSaver while Performance Mode Engaged
 ```
 
-## Regedit
+### 15. Regedit
 
 Regedit will have a powerful effect on this.
 
@@ -357,7 +372,7 @@ Create a new DWORD (32-bit) Value and rename it "TCPNoDelay".
 Set "TCPAckFrequency" to 1 as Hexadecimal.
 Set "TCPNoDelay"" to 1 as Hexadecimal.
 
-## Local Group Policy Editor
+### 16. Local Group Policy Editor
 If you use Windows 11 Home Edition, gpedit will not be installed. If you have gpedit installed, skip this. To install gpedit paste this in a .txt file:
 
 ```bash
@@ -381,7 +396,7 @@ Then go to this path and do what is told:
 Computer Configuration → Administrative Templates → Windows Components → Windows Update → Manage end user experience → Configure Automatic Updates → Enabled → Notify for download
 ```
 
-## NVIDIA Profile Inspector
+### 17. NVIDIA Profile Inspector
 
 Install NVIDIA Profile Inspector, then set these values to values shown:
 
@@ -410,11 +425,11 @@ Shader Cache - Cache Size                Unlimited
 
 This makes sure that Resizable Bar is enabled.
 
-# Deep Tweaks
+## Deep Tweaks
 
 This time we will get into **Deep Tweaks**.
 
-## MSI Utility v3
+### 1. MSI Utility v3
 
 Install MSI Utility v3, then do these:
 
@@ -422,7 +437,7 @@ Find your gpu, and tick "msi". Then set interrupt priority to "High".
 If you have NVME SSD, find NVME controller and set it's priority to "Normal".
 Find your Network Controller, then set interrupt priority to "Low".
 
-## Disabling PCIe Native Power Manegement
+### 2. Disabling PCIe Native Power Manegement
 
 Press Win+R and write regedit, then run.
 
@@ -444,7 +459,7 @@ Create DWORD (32-bit) Value named "ThreadDpcEnable" and set it to 0
 All of these numbers should be Hexadecimal numbers.
 ```
 
-## Disabling DPS
+### 3. Disabling DPS
 
 Run these three commands in order in a admin cmd prompt:
 
