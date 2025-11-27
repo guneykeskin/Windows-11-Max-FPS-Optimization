@@ -193,6 +193,7 @@ Advanced Tweaks:
 
 Edge Debloat
 Disable Edge
+Disable Background Apps
 Dİsable Fullscreen Optimizations
 Remove OneDrive
 
@@ -203,6 +204,7 @@ Snap Window
 Snap Assist Flyout
 Snap Assist Suggestion
 Show File Extensions
+Task View Button in Taskbar
 Center Taskbar Items
 ```
 
@@ -401,6 +403,7 @@ Then go to this path and do what is told:
 
 ```bash
 Computer Configuration → Administrative Templates → Windows Components → Windows Update → Manage end user experience → Configure Automatic Updates → Enabled → Notify for download
+Computer Configuration → Administrative Templates → Windows Components → App Privacy → Let Windows apps run in the background → Enabled → Force Deny
 ```
 
 ## NVIDIA Profile Inspector
