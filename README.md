@@ -15,10 +15,10 @@
 - [Latency & Accuracy](#latency-&-accuracy)
 - [Power & Network Settings](#power-&-network-&-ssd-settings)
 - [Deep Tweaks](#deep-tweaks)
-- [Warning](#warning)
+- [Warning](#⚠-warning-⚠)
 
 ## Introduction
-This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
+This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
 
 ## Prerequisites
 Before doing anything creating **restore point** is recommended.
@@ -474,7 +474,7 @@ sc stop dps
 sc config dps start=disabled
 ```
 
-# ⚠️ Warning ⚠️
+## ⚠️ Warning ⚠️
 
 While Hardware is important Software is a huge part of performance.
 
