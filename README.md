@@ -1,6 +1,9 @@
 # Windows-11-Max-FPS-Optimization
 
-Windows 11 Max FPS Optimization
+[![Windows](https://img.shields.io/badge/OS-Windows%2011-blue)](https://www.microsoft.com/en-us/windows)
+[![GPU](https://img.shields.io/badge/GPU-NVIDIA-green)](https://www.nvidia.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+
 This settings will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
 
 Before doing anything creating restore point is recommended.
@@ -30,8 +33,29 @@ Then untick everything you dont use.
 Disable Memory Integrity in Settings.
 
 ## Unnecessary Visual Effects and Virtual Memory
-Go to View advanced system settings and go to Advanced Tab, from there go to Performance and there in Visual Effects choose adjust for best performance.
-Then go to Advanced Tab from there and go to Virtual Memory, from there untick the tick in the top and choose custom size and write Max and Min size as 16000.
+Run View advanced system settings and go to:
+
+```bash
+Advanced > Performance Settings > Visual Effects
+```
+
+Then choose adjust for best performance and apply.
+
+Then from there go to:
+
+```bash
+Advanced > Virtual Memory > Change
+```
+
+Then untick "Automatically manage paging file size for all drivers.
+Then choose Custom size and set the values to shown:
+
+```bash
+Initial Size: 16000
+Maximum Size: 16000
+```
+
+Then click Set, OK and Apply in order.
 
 ## NVIDIA Settings
 Install NVIDIA App, from there update GPU driver and go to Settings and disable overlay and game filters and photo mode.
@@ -127,6 +151,7 @@ Then you should disable and stop all these services:
 ```
 
 **⚠️Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after.⚠️**
+
 Then run this in admin powershell:
 
 ```bash
