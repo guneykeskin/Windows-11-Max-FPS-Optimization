@@ -10,10 +10,10 @@
 - [Basic Optimization](#basic-optimization)
   - [Task Scheduler](#task-scheduler)
   - [Services](#useless-services)
-- [NVIDIA Optimization](#nvidia-settings)
+- [NVIDIA Optimization](#nvidia-optimization)
 - [Debloating Windows](#debloating-windows)
 - [Latency & Accuracy](#latency-&-accuracy)
-- [Power & Network Settings](#power-network-ssd-settings)
+- [Power & Network Settings](#power-&-network-&-ssd-settings)
 - [Deep Tweaks](#deep-tweaks)
 - [Warning](#warning)
 
