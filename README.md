@@ -15,6 +15,8 @@ Game Mode: Enabled
 
 ## Unnecesarry & Bloatware & Optimization
 
+We will disable unnecessary stuff and do optimization.
+
 # Task Scheduler
 Run Task Scheduler, enter Task Scheduler Library and disable everything that you dont need by right clicking on them and choosing "Disable".
 
@@ -139,6 +141,8 @@ Run these command in order in cmd admin:
 ```bash
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_PROCESSOR IdleDisable 1
+powercfg.exe /setactive SCHEME_CURRENT
 ```
 
 Go to Power operation settings and set Power mode to Max Performance
@@ -353,7 +357,30 @@ Create DWORD (32-bit) Value named "InterruptSteeringDisabled" and set it to 1
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
 Create DWORD (32-bit) Value named "MaximumPayloadSize" and set it to 512
 
-All of these numbers should be Hexadecimal values.
+[HKLM\System\CurrentControlSet\Control\Session Manager\kernel]
+Create DWORD (32-bit) Value named "ThreadDpcEnable" and set it to 0
+
+All of these numbers should be Hexadecimal numbers.
+```
+
+# Disabling DPS
+
+Run these three commands in order in a admin cmd prompt:
+
+```bash
+sc query dps
+sc stop dps
+sc config dps start=disabled
+```
+
+# Disabling Audiosrv
+
+Run these three commands in order in a admin cmd prompt:
+
+```bash
+sc query Audiosrv
+sc stop Audiosrv
+sc config Audiosrv start=disabled
 ```
 
 # ⚠️ Do not Forget ⚠️
