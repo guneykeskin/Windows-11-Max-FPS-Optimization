@@ -12,19 +12,20 @@
   - [Services](#useless-services)
 - [NVIDIA Optimization](#nvidia-settings)
 - [Debloating Windows](#useless-windows-features)
-- [Power & Network Settings](#power-plan)
+- [Latency & Accuracy](#latency-accuracy)
+- [Power & Network Settings](#power-network-ssd-settings)
 - [Deep Tweaks](#deep-tweaks)
 - [Warning](#-do-not-forget-)
 
 ## Introduction
-This settings will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
+This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
 
 ## Prerequisites
-Before doing anything creating restore point is recommended.
+Before doing anything creating **restore point** is recommended.
 
 ## Basic Optimization
 
-In settings do these:
+Before starting, in settings do these:
 
 ```bash
 1. Hardware accelerated GPU scheduling: On
@@ -32,23 +33,18 @@ In settings do these:
 3. Game Mode: Enabled
 ```
 
-## Unnecesarry & Bloatware & Optimization
-
-We will disable unnecessary stuff and do optimization.
-
 ### 1. Task Scheduler
 Run Task Scheduler, enter Task Scheduler Library and disable everything that you dont need by right clicking on them and choosing "Disable".
 
-### 2. Useless Services
-
+### 2. Services
 Press Win+R and write msconfig and run.
 Then go to Services and tick "Hide all Microsoft services".
 Then untick everything you dont use.
 
-### 3. Unnecessary protection
+### 3. Memory Integrity
 Disable Memory Integrity in Settings.
 
-### 4. Unnecessary Visual Effects and Virtual Memory
+### 4. Visual Effects & Virtual Memory
 Run View advanced system settings and go to:
 
 ```bash
@@ -73,7 +69,7 @@ Maximum Size: 16000
 
 Then click Set, OK and Apply in order.
 
-### 5. NVIDIA Settings
+## NVIDIA Optimization
 Install NVIDIA App, from there update GPU driver and go to Settings and disable overlay and game filters and photo mode.
 Go to NVIDIA Control Panel and tick Use the advanced 3D image settings and click Take me there.
 
@@ -115,10 +111,10 @@ In NVIDIA App go to Graphics and in Global Settings
 2. DLSS Override - Super Resolution Mode: Ultra Performance
 ```
 
-### 6. Useless Windows Features
+## Debloating Windows
 Go to turn on or off Windows features, then turn off everything else than the two .Net Framework's.
 
-### 7. Debloat
+### 1. Debloat
 Install raphire debloat from this [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
 
 Then, replace everything inside Appslist.txt inside the folder that was installed with the "Appslist.txt" in this repository.
@@ -126,7 +122,7 @@ Then, replace everything inside Appslist.txt inside the folder that was installe
 Then run "Run.bat" inside it and go disable/delete everything you can that is bloatware.
 Go to task manager and disable everything in Startup Apps.
 
-### 8. Disabling services:
+### 2. Disabling services:
 Press Win+R and write "services.msc" in there and run it.
 
 Then you should disable and stop all these services:
@@ -166,6 +162,7 @@ Then you should disable and stop all these services:
 32. Background Intelligent Transfer Service
 ```
 
+### 3. Christitus Debloat
 **⚠️Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after.⚠️**
 
 Then run this in admin powershell:
@@ -183,7 +180,7 @@ Essential Tweaks:
 Delete Temporary Files
 Disable ConsumerFeatures
 Disable Telemtry
-Dİsable Activity History
+Disable Activity History
 Disable Explorer Automatic Folder Discovery
 Disable GameDVR
 Disable Location Tracking
@@ -211,7 +208,9 @@ Center Taskbar Items
 
 Then click on Run Tweaks and do Disk Cleanup.
 
-### 9. Keyboard and Mouse Latency & Accuracy
+## Latency & Accuracy
+
+# 1. Keyboard
 Go to Keyboard Properties and set these:
 
 ```bash
@@ -221,6 +220,7 @@ Repeat rate: Fast
 
 Then apply.
 
+# 2. Mouse
 Go to Mouse Properties > Pointer Options > Motion and set this:
 
 ```bash
@@ -231,7 +231,9 @@ Then apply.
 
 Install your mouse software and set your polling rate to max.
 
-### 10. Power Plan
+## Power & Network & SSD Settings
+
+### 1. Power Plan
 
 Run these command in order in cmd admin:
 
@@ -245,7 +247,7 @@ powercfg.exe /setactive SCHEME_CURRENT
 Go to Power operation settings and set Power mode to Max Performance
 Apply.
 
-### 11. Network Settings
+### 2. Network Settings
 
 Use admin CMD to find your DNS with the lowest ms.
 There will be two DNS covered in this tutorial. So here is the two command to run:
@@ -288,11 +290,13 @@ For me its 1500 so:
 netsh int ipv4 set subinterface “Ethernet” mtu=1500 store=persistent
 ```
 
-### 12. SSD
+### 3. SSD
 Go to Control Panel > Power Options > Choose what the power buttons do
 From there click "Change settings that are currently unavailable" and untick "Turn on fast startup"
 
-### 13. MSI Afterburner
+## Overclock & Priority
+
+### 1. MSI Afterburner
 
 Install MSI Afterburner then click on that windows icon to make sure that overclock applys after restart.
 Then go to settings, and choose your GPU at the top. Then tick these:
@@ -311,7 +315,7 @@ Core Clock: +200
 Memory Clock: +1300
 ```
 
-### 14. Process Lasso
+### 2. Process Lasso
 
 Install Process Lasso then tick/do these:
 
@@ -333,9 +337,9 @@ Install Process Lasso then tick/do these:
 15. Options > Power > Performance Mode > Disable IdleSaver while Performance Mode Engaged
 ```
 
-### 15. Regedit
+## Regedit
 
-Regedit will have a powerful effect on this.
+### 1. Main
 
 Here is everything that should be done:
 
@@ -351,7 +355,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
 ```
 
-We still have to do one more regit optimization.
+### 2. Network
+
+We still have to do one more regedit optimization.
 Open cmd, then enter this command:
 
 ```bash
@@ -373,7 +379,7 @@ Create a new DWORD (32-bit) Value and rename it "TCPNoDelay".
 Set "TCPAckFrequency" to 1 as Hexadecimal.
 Set "TCPNoDelay"" to 1 as Hexadecimal.
 
-### 16. Local Group Policy Editor
+## Local Group Policy Editor
 If you use Windows 11 Home Edition, gpedit will not be installed. If you have gpedit installed, skip this. To install gpedit paste this in a .txt file:
 
 ```bash
@@ -397,7 +403,7 @@ Then go to this path and do what is told:
 Computer Configuration → Administrative Templates → Windows Components → Windows Update → Manage end user experience → Configure Automatic Updates → Enabled → Notify for download
 ```
 
-### 17. NVIDIA Profile Inspector
+## NVIDIA Profile Inspector
 
 Install NVIDIA Profile Inspector, then set these values to values shown:
 
@@ -423,8 +429,6 @@ rBAR - Options                           0x00000001 (Returnal, Red Dead Redempti
 rBAR - Size Limit                        0x0000000040000000
 Shader Cache - Cache Size                Unlimited
 ```
-
-This makes sure that Resizable Bar is enabled.
 
 ## Deep Tweaks
 
@@ -470,8 +474,8 @@ sc stop dps
 sc config dps start=disabled
 ```
 
-# ⚠️ Do not Forget ⚠️
+# ⚠️ Warning ⚠️
 
 While Hardware is important Software is a huge part of performance.
 
-**Make sure you keep your GPU driver up-to-date!**
+**Make sure you keep your GPU driver and Windows up-to-date!**
