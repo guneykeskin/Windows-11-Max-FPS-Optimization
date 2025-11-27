@@ -19,6 +19,7 @@
 ## Introduction
 This settings will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do:
 
+## Prerequisites
 Before doing anything creating restore point is recommended.
 
 ## Basic Optimization
