@@ -126,6 +126,49 @@ Then you should disable and stop all these services:
 32. Background Intelligent Transfer Service
 ```
 
+Then run this in admin powershell:
+
+```bash
+iwr -useb https://christitus.com/win | iex
+```
+
+Then go to tweaks and choose Standard.
+Then tick these and untick or toggle on and toggle off everything else:
+
+```bash
+Essential Tweaks:
+
+Delete Temporary Files
+Disable ConsumerFeatures
+Disable Telemtry
+Dİsable Activity History
+Disable Explorer Automatic Folder Discovery
+Disable GameDVR
+Disable Location Tracking
+Disable StorageSense
+Disable Wi-Fi Sense
+Run Disk Cleanup
+Disable Powershell 7 Telemetry
+
+Advanced Tweaks:
+
+Edge Debloat
+Disable Edge
+Dİsable Fullscreen Optimizations
+Remove OneDrive
+
+Customize Preferences:
+
+Dark Theme for Windows
+Snap Window
+Snap Assist Flyout
+Snap Assist Suggestion
+Show File Extensions
+Center Taskbar Items
+```
+
+Then click on Run Tweaks and do Disk Cleanup.
+
 ## Keyboard and Mouse Latency & Accuracy
 Go to Keyboard Properties and set these:
 
