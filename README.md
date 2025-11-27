@@ -12,6 +12,7 @@
 - [Debloating Windows](#debloating-windows)
 - [Latency & Accuracy](#latency--accuracy)
 - [Power & Network & SSD Settings](#power--network--ssd-settings)
+- [Overclock & Priority](#overclock--priority)
 - [Deep Tweaks](#deep-tweaks)
 - [Warning](#warning)
 
@@ -161,7 +162,7 @@ Then you should disable and stop all these services:
 ```
 
 ### 3. Christitus Debloat
-**⚠️Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after.⚠️**
+**⚠️ Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after. ⚠️**
 
 Then run this in admin powershell:
 
