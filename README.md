@@ -11,7 +11,7 @@ Boost your Windows 11 performance for NVIDIA GPUs 🖥️🎮
 - [Basic Optimization](#basic-optimization)
 - [NVIDIA Optimization](#nvidia-optimization)
 - [Debloating Windows](#debloating-windows)
-- [Latency & Accuracy](#latency--accuracy)
+- [Latency & Accuracy](#⚡-latency--accuracy)
 - [Power & Network & SSD Settings](#power--network--ssd-settings)
 - [Overclock & Priority](#overclock--priority)
 - [Deep Tweaks](#deep-tweaks)
@@ -208,7 +208,7 @@ Center Taskbar Items
 
 Then click on Run Tweaks and do Disk Cleanup.
 
-## Latency & Accuracy <span>⚡</span>
+## ⚡ Latency & Accuracy
 
 # 1. Keyboard
 Go to Keyboard Properties and set these:
