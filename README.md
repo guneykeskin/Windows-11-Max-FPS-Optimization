@@ -8,8 +8,6 @@
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Basic Optimization](#basic-optimization)
-  - [Task Scheduler](#task-scheduler)
-  - [Services](#services)
 - [NVIDIA Optimization](#nvidia-optimization)
 - [Debloating Windows](#debloating-windows)
 - [Latency & Accuracy](#latency--accuracy)
@@ -474,7 +472,7 @@ sc stop dps
 sc config dps start=disabled
 ```
 
-## ⚠️ Warning ⚠️
+## Warning
 
 While Hardware is important Software is a huge part of performance.
 
