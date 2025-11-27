@@ -373,16 +373,6 @@ sc stop dps
 sc config dps start=disabled
 ```
 
-## Disabling Audiosrv
-
-Run these three commands in order in a admin cmd prompt:
-
-```bash
-sc query Audiosrv
-sc stop Audiosrv
-sc config Audiosrv start=disabled
-```
-
 # ⚠️ Do not Forget ⚠️
 
 While Hardware is important Software is a huge part of performance.
