@@ -1,10 +1,11 @@
-# Windows-11-Max-FPS-Optimization
+# 🚀 Windows 11 Max FPS Optimization
+Boost your Windows 11 performance for NVIDIA GPUs 🖥️🎮
 
 [![Windows](https://img.shields.io/badge/OS-Windows%2011-blue)](https://www.microsoft.com/en-us/windows)
 [![GPU](https://img.shields.io/badge/GPU-NVIDIA-green)](https://www.nvidia.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-## Table of Contents
+## 📑 Table of Contents
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Basic Optimization](#basic-optimization)
@@ -20,7 +21,7 @@
 This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
 
 ## Prerequisites
-Before doing anything creating **restore point** is recommended.
+> ⚠️ **Warning:** Before tweaking, always create a restore point. These tweaks are for high-end PCs and NVIDIA GPUs only.
 
 ## Basic Optimization
 
@@ -162,7 +163,7 @@ Then you should disable and stop all these services:
 ```
 
 ### 3. Christitus Debloat
-**⚠️ Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after. ⚠️**
+**⚠️ Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after ⚠️**
 
 Then run this in admin powershell:
 
@@ -207,7 +208,7 @@ Center Taskbar Items
 
 Then click on Run Tweaks and do Disk Cleanup.
 
-## Latency & Accuracy
+## Latency & Accuracy <span>⚡</span>
 
 # 1. Keyboard
 Go to Keyboard Properties and set these:
@@ -478,3 +479,10 @@ sc config dps start=disabled
 While Hardware is important Software is a huge part of performance.
 
 **Make sure you keep your GPU driver and Windows up-to-date!**
+
+## 📖 License
+
+MIT License
+
+This code is completely open. You can use it however you want, share it, and develop it.  
+**Please give credit** by linking back to the original project.
