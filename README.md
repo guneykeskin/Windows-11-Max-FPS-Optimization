@@ -21,7 +21,7 @@ Boost your Windows 11 performance for NVIDIA GPUs 🖥️🎮
 This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
 
 ## Prerequisites
-> ⚠️ **Warning:** Before tweaking, always create a restore point. These tweaks are for high-end PCs and NVIDIA GPUs only.
+> ⚠️ **Warning:** Before tweaking, always create a restore point. These tweaks are for NVIDIA GPUs only.
 
 ## Basic Optimization
 
@@ -44,6 +44,7 @@ Then untick everything you dont use.
 ### 3. Memory Integrity
 Disable Memory Integrity in Settings.
 
+> 💡 **Tip:** While Memory Integrity improves performance, it might reduce safety against malware.
 ### 4. Visual Effects & Virtual Memory
 Run View advanced system settings and go to:
 
@@ -163,7 +164,7 @@ Then you should disable and stop all these services:
 ```
 
 ### 3. Christitus Debloat
-**⚠️ Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after ⚠️**
+> ⚠️ **Warning:** Before doing this debloat the debloat will delete everything else than shortcuts and recycling bin, so you can put the folders in another folder that is not in the desktop and put it back in the desktop after.
 
 Then run this in admin powershell:
 
@@ -403,7 +404,19 @@ Then go to this path and do what is told:
 
 ```bash
 Computer Configuration → Administrative Templates → Windows Components → Windows Update → Manage end user experience → Configure Automatic Updates → Enabled → Notify for download
+Computer Configuration → Administrative Templates → Windows Components → Windows Error Reporting → Disable Windows Error Reporting → Enabled
 Computer Configuration → Administrative Templates → Windows Components → App Privacy → Let Windows apps run in the background → Enabled → Force Deny
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off handwriting recognition error reporting → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off Windows Customer Experience improvement Program → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off printing over HTTP → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off Windows Error Reporting → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off acess to all Windows Update features → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off Search Companion content file updates → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off the Windows Messenger Customer Experience Improvement Program → Enabled
+Computer Configuration → Administrative Templates → System → Internet Communication Management → Internet Communication settings → Turn off handwriting recognition personalization data sharing → Enabled
+Computer Configuration → Administrative Templates → System → Power Management → Power Throttling Settings → Turn off Power Throttling → Enabled
+Computer Configuration → Administrative Templates → Network → QoS Packet Scheduler → Limit reservable bandwith → Enabled → Bandwidth limit → 0
+Computer Configuration → Administrative Templates → Network → QoS Packet Scheduler → Set timer resulotion → Enabled → Bandwidth limit → 0
 ```
 
 ## NVIDIA Profile Inspector
