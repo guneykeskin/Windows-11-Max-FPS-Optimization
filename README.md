@@ -238,11 +238,30 @@ Install your mouse software and set your polling rate to max.
 
 ### 1. Power Plan
 
+Go to choose a Power Plan, then create a power plan named "Optimum Performance".
+Choose 5 mins for Turn off the display and Put the computer to sleep.
+Then change advanced plan settings and do these:
+
+```bash
+Desktop background settings > Slide show > Paused for both
+PCI Express > Link State Power Magement > Off for both
+Processor power mangement > Minimum processor state > %100 for both
+Processor power mangement > Maximum processor state > %100 for both
+```
+
+Now you can do these steps for the most possible **Optimum Performance** but it haves risks:
+> ⚠️ **Disclaimer:** Apply changes at your own risk. I take no responsibility for any temporary or permanent system damage. If unsure, dont do this settings.
+
+#### Optimum Performance
+
+Install [Powersettingsexplorer](https://www.mediafire.com/file/wt37sbsejk7iepm/PowerSettingsExplorer.zip).
+Then run it as adminastator.
+
+Then in hidden, untick all of the ticks.
+
 Run these command in order in cmd admin:
 
 ```bash
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
 powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_PROCESSOR IdleDisable 1
 powercfg.exe /setactive SCHEME_CURRENT
 ```
