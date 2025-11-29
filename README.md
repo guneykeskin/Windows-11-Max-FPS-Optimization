@@ -399,6 +399,9 @@ RAM	Value
 
 Everything on top is Hexadecimal
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl\Win32PrioritySeparation = 38 (as Decimal)
+
+For a gaming-PC with ample RAM, the idea is that keeping more system code in RAM might reduce stutters or latency spikes related to paging, especially if the system is under load. So we have to disable paging executive if you have a ample RAM:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\DisablePagingExecutive = 1
 ```
 
 ### 2. Network
