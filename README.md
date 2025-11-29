@@ -184,6 +184,7 @@ Disable Telemtry
 Disable Activity History
 Disable Explorer Automatic Folder Discovery
 Disable GameDVR
+Disable Hibernation
 Disable Location Tracking
 Disable StorageSense
 Disable Wi-Fi Sense
@@ -195,7 +196,7 @@ Advanced Tweaks:
 Edge Debloat
 Disable Edge
 Disable Background Apps
-Dİsable Fullscreen Optimizations
+Disable Fullscreen Optimizations
 Remove OneDrive
 
 Customize Preferences:
@@ -257,7 +258,15 @@ Now you can do these steps for the most possible **Optimum Performance** but it 
 Install [Powersettingsexplorer](https://www.mediafire.com/file/wt37sbsejk7iepm/PowerSettingsExplorer.zip).
 Then run it as adminastator.
 
-Then in hidden, untick all of the ticks.
+Then in click "Unhide all".
+Then go to choose a power plan and go to settings of Optimum Performance, then from there go to Advanced Settings and do these settings:
+
+```bash
+Hard disk > Secondery NVMe Idle Timeout > 0 for both
+Processor power management > Processor performance time check interval > 5000 for both
+Processor power management > Processor idle time check > 100000 for both
+Processor power mangement > Maximum processor state > %100 for both
+```
 
 Run these command in order in cmd admin:
 
