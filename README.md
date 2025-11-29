@@ -375,7 +375,7 @@ Install Process Lasso then tick/do these:
 Here is everything that should be done:
 
 ```bash
-Create DWORD 32-bit Value or keys if it doesn't exist.
+Create DWORD 32-bit Value or keys if it does not exist.
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling\PowerThrottlingOff = 1
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\NetworkThrottlingIndex = ffffffff
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583\ValueMax = 0
