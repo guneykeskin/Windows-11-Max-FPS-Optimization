@@ -25,12 +25,14 @@ This repository was made when I was 11 and was beeing published when I was 11. T
 
 ## Basic Optimization
 
-Before starting, in settings do these:
+In settings do these:
 
 ```bash
-1. Hardware accelerated GPU scheduling: On
-2. Monitor Hz: Max avaliable
-3. Game Mode: Enabled
+1. System > Display > Graphics > Optimizations for windowed games: Off
+1. System > Display > Graphics > Advanced graphics settings > Hardware accelerated GPU scheduling: On
+2. System > Display > Advanced display > Refresh rate: Max avaliable
+3. Gaming > Game Mode: On
+4. Privacy & security > Recommendations & offers > Toggle off everything
 ```
 
 ### 1. Task Scheduler
@@ -385,6 +387,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Direct3D\MaxPreRenderedFrames = 1
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\SystemResponsiveness = 0
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
+HKEY_CURRENT_USER\Control Panel\Desktop\MenuShowDelay = 0
+HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate = 200
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SvcHostSplitThresholdInKB = set according to your RAM:
 
 RAM	Value
