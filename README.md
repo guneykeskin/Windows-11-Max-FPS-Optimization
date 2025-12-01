@@ -433,6 +433,20 @@ Everything on top is Hexadecimal
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl\Win32PrioritySeparation = 38 (as Decimal)
 ```
 
+Then in cmd admin run these commands in order:
+
+```bash
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v HwSchMode /t REG_DWORD /d 2 /f
+netsh int tcp set global autotuninglevel=disabled
+netsh int tcp set global rss=disabled
+powercfg -h off
+
+Do this if you will not install malware:
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+
+Revert AntiSpyware setting:
+reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /f
+```
 ### 2. Network
 
 We still have to do one more regedit optimization.
