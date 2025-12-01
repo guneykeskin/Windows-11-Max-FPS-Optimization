@@ -18,13 +18,14 @@ Boost your Windows 11 performance for NVIDIA GPUs 🖥️🎮
 - [Warning](#warning)
 
 ## Introduction
-This repository was made when I was 11 and was beeing published when I was 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
+This project was originally created when I was 11 years old. Over time, I refined it into a complete optimization guide for Windows 11 NVIDIA systems at 11. This optimizations will make your PC maximum performance that works for Windows 11 for High-End PC's with NVIDIA GPU. Here is steps that you have to do.
+
+> ⚠️ **Disclaimer:** Apply changes at your own risk. I take no responsibility for any temporary or permanent system damage. If unsure, dont do this settings. These tweaks are for advanced users only, some tweaks may reduce system stability or security. Do NOT apply everything blindly. Read each section first.
 
 ## Prerequisites
 > ⚠️ **Warning:** Before tweaking, always create a restore point. These tweaks are for NVIDIA GPUs only.
 
 ## Basic Optimization
-
 In settings do these:
 
 ```bash
@@ -56,6 +57,7 @@ Advanced > Performance Settings > Visual Effects
 
 Then choose adjust for best performance and apply.
 
+Do this only if you have 16 GB or less RAM:
 Then from there go to:
 
 ```bash
@@ -389,6 +391,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
 HKEY_CURRENT_USER\Control Panel\Desktop\MenuShowDelay = 0
 HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate = 200
+HKEY_CURRENT_USER\Control Panel\Desktop\DoubleClickSpeed = 100
+If there is no "DoubleClickSpeed" create a string value named "DoubleClickSpeed" and set it to 100.
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SvcHostSplitThresholdInKB = set according to your RAM:
 
 RAM	Value
