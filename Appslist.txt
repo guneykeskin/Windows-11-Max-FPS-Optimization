@@ -128,7 +128,7 @@ Microsoft.XboxGamingOverlay                   # Game overlay, required/useful fo
 Microsoft.XboxIdentityProvider                # Xbox sign-in framework, required for some games and Xbox services
 Microsoft.XboxSpeechToTextOverlay             # Might be required for some games, WARNING: This app cannot be reinstalled easily! (Accessibility feature)
 Microsoft.YourPhone                           # Phone link (Connects Android/iOS phone to PC)
-#Microsoft.ZuneMusic                           # Modern Media Player (Replaced Groove Music, plays local audio/video)
+Microsoft.ZuneMusic                           # Modern Media Player (Replaced Groove Music, plays local audio/video)
 MicrosoftWindows.CrossDevice                  # Phone integration within File Explorer, Camera and more (Part of Phone Link features)
 AD2F1837.HPAIExperienceCenter                 # HP OEM software, AI-enhanced features and support
 AD2F1837.HPConnectedMusic                     # HP OEM software for music (Potentially discontinued)
