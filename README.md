@@ -491,7 +491,7 @@ Computer Configuration → Administrative Templates → Network → QoS Packet S
 Install NVIDIA Profile Inspector, then set these values to values shown:
 
 ```bash
-### NVIDIA Profile Inspector ###         Fortnite
+### NVIDIA Profile Inspector ###         Base Profile
 
 [2 - Sync and Refresh]
 Maximum Pre-Rendered Frames              1
@@ -503,7 +503,7 @@ Vertical Sync                            Force off
 [3 - Antialiasing]
 Antialiasing - Gamma Correction          Off
 Antialiasing - Transparency Multisampling Disabled
-Antialiasing - Transparency Supersampling Off / Multisampling
+Antialiasing - Transparency Supersampling 0x00000008 AA_MODE_REPLAY_MODE_ALL
 Antialiasing (MSAA) - Mode               Override any application setting
 
 [4 - Texture Filtering]
@@ -521,7 +521,7 @@ Threaded Optimization                    On
 
 [Other]
 NVIDIA Predefined Ansel Usage            0x00000000 ANSEL_ALLOW_DISALLOWED
-NVIDIA Predefined Sharpen Usage          0x00000000
+NVIDIA Predefined Sharpen Usage          0x00000000 
 ```
 
 ## Deep Tweaks
