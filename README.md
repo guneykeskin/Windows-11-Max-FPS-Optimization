@@ -401,33 +401,10 @@ RAM	Value
 6 GB	600000
 8 GB	800000
 12 GB	c00000
-16 GB	1000000 (me so: SvcHostSplitThresholdInKB = 1000000O)
+16 GB	1000000 (me so: SvcHostSplitThresholdInKB = 1000000)
 24 GB	1800000
 32 GB	2000000
 64 GB	4000000
-
-Memory Mangement:
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-DisablePagingExecutive: 1 (if you have ample RAM like 32 GB RAM. If not, performance might reduce)
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-LargeSystemCache = 0
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-NonPagedPoolQuota = 0xFFFFFFFF
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-ExistingPageFiles = C:\pagefile.sys
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-ClearPageFileAtShutdown = 0
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-FeatureSettingsOverride = 0
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
-EnableSuperfetch = 0
 
 Everything on top is Hexadecimal
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl\Win32PrioritySeparation = 38 (as Decimal)
