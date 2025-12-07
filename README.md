@@ -389,6 +389,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Direct3D\MaxPreRenderedFrames = 1
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\SystemResponsiveness = 0
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm\OverlayTestMode = 5
 HKEY_CURRENT_USER\Control Panel\Desktop\MenuShowDelay = 0
 HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate = 200
 HKEY_CURRENT_USER\Control Panel\Desktop\DoubleClickSpeed = 100
