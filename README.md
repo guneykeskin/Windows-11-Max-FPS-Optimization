@@ -503,7 +503,7 @@ Antialiasing - Gamma Correction          Off
 
 [4 - Texture Filtering]
 Anisotropic Filtering - Mode             User-defined / Off
-Texture Filtering - Negative LOD bias    Clamp
+Texture Filtering - Negative LOD bias    Allow
 Texture Filtering - Quality              High performance
 
 [5 - Common]
