@@ -99,7 +99,7 @@ These are the settings for Global Settings:
 16. OpenGL rendering GPU: Auto-select
 17. Power management mode: Prefer maximum performance
 18. Texture filtering - Anistropic sample optimazation: On
-19. Texture filtering - Negative LOD bias: Clamp
+19. Texture filtering - Negative LOD bias: Allow
 20. Texture filtering - Quality: High performance
 21. Texture filtering - Trilinear optimization: On
 22. Threaded optimization: On
