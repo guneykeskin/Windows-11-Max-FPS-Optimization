@@ -120,7 +120,7 @@ In NVIDIA App go to Graphics and in Global Settings
 Go to turn on or off Windows features, then turn off everything else than the two .Net Framework's.
 
 ### 1. Debloat
-Install raphire debloat from this [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
+Install [Raphire Debloat](https://github.com/Raphire/Win11Debloat).
 
 Then, replace everything inside Appslist.txt inside the folder that was installed with the "Appslist.txt" in this repository.
 
