@@ -491,26 +491,37 @@ Computer Configuration → Administrative Templates → Network → QoS Packet S
 Install NVIDIA Profile Inspector, then set these values to values shown:
 
 ```bash
-### NVIDIA Profile Inspector ###         Base Profile
+### NVIDIA Profile Inspector ###         Fortnite
 
 [2 - Sync and Refresh]
+Maximum Pre-Rendered Frames              1
+Prefered Refreshrate                     Highest available
 Ultra Low Latency - CPL State            Ultra
 Ultra Low Latency - Enabled              On
+Vertical Sync                            Force off
 
 [3 - Antialiasing]
-Antialiasing - FXAA Enabled (predefined by NVIDIA) Disallowed
 Antialiasing - Gamma Correction          Off
+Antialiasing - Transparency Multisampling Disabled
+Antialiasing - Transparency Supersampling Off / Multisampling
+Antialiasing (MSAA) - Mode               Override any application setting
 
 [4 - Texture Filtering]
-Anisotropic Filtering - Mode             User-defined / Off
+Anisotropic Filter - Optimization        On
+Anisotropic Filter - Sample Optimization On
+Prevent Anisotropic Filtering            On
+Texture Filtering - LOD Bias (DX)        +0.1250
+Texture Filtering - LOD Bias (OGL)       +0.0625
 Texture Filtering - Negative LOD bias    Allow
-Texture Filtering - Quality              High performance
 
 [5 - Common]
-rBAR - Enable                            Enabled
-rBAR - Options                           0x00000001 (Returnal, Red Dead Redemption 2)
-rBAR - Size Limit                        0x0000000040000000
+Ansel - Enabled                          Off
 Shader Cache - Cache Size                Unlimited
+Threaded Optimization                    On
+
+[Other]
+NVIDIA Predefined Ansel Usage            0x00000000 ANSEL_ALLOW_DISALLOWED
+NVIDIA Predefined Sharpen Usage          0x00000000
 ```
 
 ## Deep Tweaks
