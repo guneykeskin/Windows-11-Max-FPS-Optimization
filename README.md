@@ -250,8 +250,21 @@ Then change advanced plan settings and do these:
 ```bash
 Desktop background settings > Slide show > Paused for both
 PCI Express > Link State Power Magement > Off for both
+Hard Disk > Turn off hard disk after > 0
+Sleep > Allow hybrid sleep > Off
+USB settings > USB selective suspend setting > Setting > Disabled
 Processor power mangement > Minimum processor state > %100 for both
 Processor power mangement > Maximum processor state > %100 for both
+Processor power mangement > Processor idle demote treshold > %100
+Processor power mangement > Processor idle promote treshold > %100
+```
+
+Instal ParkControl.
+Then choose optimum performance power profile and make Plugged In and On Battery settings like these:
+
+```bash
+Parking: Off
+Freq Scaling: Off
 ```
 
 Now you can do these steps for the most possible **Optimum Performance** but it haves risks:
