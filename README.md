@@ -431,8 +431,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v HwSchMode /t 
 netsh int tcp set global autotuninglevel=disabled
 netsh int tcp set global rss=disabled
 powercfg -h off
-bcdedit /set useplatformclock true
-bcdedit /set disabledynamictick yes
 netsh int tcp set global autotuninglevel=highlyrestricted
 
 Run this if you will not install malware:
@@ -570,19 +568,6 @@ Create DWORD (32-bit) Value named "MaximumPayloadSize" and set it to 512
 
 [HKLM\System\CurrentControlSet\Control\Session Manager\kernel]
 Create DWORD (32-bit) Value named "ThreadDpcEnable" and set it to 0
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
-Create or modify DWORD (32-bit) Value named "LowLatencyQueue" and set it to 1
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
-Create or modify DWORD (32-bit) Value named "L1PMEnable" and set it to 0
-
-[HKEY_CURRENT_USER\System\GameConfigStore]
-Create or modify DWORD (32-bit) Value named "GameDVR_FSEBehaviorMode" and set it to 0
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
-Create or modify DWORD (32-bit) Value named "EnablePrefetcher" and set it to 0
-Create or modify DWORD (32-bit) Value named "EnableSuperfetch" and set it to 0
 
 All of these numbers should be Hexadecimal numbers.
 ```
