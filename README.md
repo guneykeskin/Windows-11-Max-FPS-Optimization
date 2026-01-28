@@ -297,24 +297,24 @@ Apply.
 
 ### 2. Network Settings
 
-Use admin CMD to find your DNS with the lowest ms.
+Use admin Powershell to find your DNS with the lowest ms.
 There will be two DNS covered in this tutorial. So here is the two command to run:
 
 ```bash
-ping 8.8.8.8
+(Measure-Command { Resolve-DnsName google.com -Server 8.8.8.8 }).TotalMilliseconds
 
-Minimum = ms, Maximum = ms, Average = ms
+10.001
 
-ping 1.1.1.1
+(Measure-Command { Resolve-DnsName google.com -Server 1.1.1.1 }).TotalMilliseconds
 
-Minimum = ms, Maximum = ms, Average = ms
+9.987
 ```
 
-Choose the one with the lowest ms, for me its 8.8.8.8.
+Choose the one with the lowest ms, for me its "8.8.8.8".
 
 Go to Network Connections and double click the connection you use.
 Then go to properties, from there go to IPv4 settings.
-Then tick "Use the following DNS setver addresses".
+Then tick "Use the following DNS server addresses".
 
 Since its 8.8.8.8 for me, here is what I wrote:
 
@@ -323,19 +323,56 @@ Preferred DNS server: 8.8.8.8
 Alternate DNS server: 8.8.4.4
 ```
 
-Run cmd as admin then find your max MTU with this, try until it doesnt give you any loss:
+If its 1.1.1.1 then write:
+
+
+Run cmd as admin then find your max MTU with this, beginner value is 1472 and try until it doesnt give you any loss:
 ```bash
-ping google.com -f -l [MTU]
+ping google.com -f -l [payload]
 ```
 
-Then set it:
+When you find the payload size that does not give you request timed out, add 28 to the payload size you found and
+find your used network device from the interface category:
+
 ```bash
-netsh int ipv4 set subinterface “Ethernet” mtu=MTU store=persistent
+netsh interface ipv4 show subinterfaces
+```
+
+then replace "Ethernet" here with the device you are using for network and replace MTU with calculated MTU:
+
+```bash
+netsh int ipv4 set subinterface "Ethernet" mtu=MTU store=persistent
 ```
 
 For me its 1500 so:
 ```bash
-netsh int ipv4 set subinterface “Ethernet” mtu=1500 store=persistent
+netsh int ipv4 set subinterface "Ethernet" mtu=1500 store=persistent
+```
+
+To check current MTU:
+```bash
+netsh interface ipv4 show subinterfaces
+```
+
+Open Device Manager → Network Adapter → Your Network Adapter (mostly realtek if ethernet and wi-fi for wi-fi) → Properties → Advanced:
+
+```bash
+Energy Efficient Ethernet (EEE): Disabled
+Interrupt Moderation: Disabled
+Receive/Transmit Buffers: Experiment (often smaller is lower latency, higher values is stable and lower values are slightly lower latency)
+Flow Control: Disabled
+
+if exists:
+Preffered Bandwith: Max
+Roaming Agressiveness: Lowest or Disabled
+Transmit Power: Max
+
+```
+
+Run this command in cmd admin:
+
+```bash
+netsh interface tcp set global autotuninglevel=disabled
 ```
 
 ### 3. SSD
@@ -428,10 +465,7 @@ Then in cmd admin run these commands in order:
 
 ```bash
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v HwSchMode /t REG_DWORD /d 2 /f
-netsh int tcp set global autotuninglevel=disabled
-netsh int tcp set global rss=disabled
 powercfg -h off
-netsh int tcp set global autotuninglevel=highlyrestricted
 
 Run this if you will not install malware:
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
