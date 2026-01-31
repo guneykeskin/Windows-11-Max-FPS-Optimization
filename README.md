@@ -443,6 +443,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Direct3D\MaxPreRenderedFrames 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\SystemResponsiveness = 0
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm\OverlayTestMode = 5
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters\FastSendDatagramThreshold = 64000 (decimal)
 HKEY_CURRENT_USER\Control Panel\Desktop\MenuShowDelay = 0
 HKEY_CURRENT_USER\Control Panel\Desktop\CursorBlinkRate = 200
 HKEY_CURRENT_USER\Control Panel\Desktop\DoubleClickSpeed = 100
