@@ -107,9 +107,11 @@ These are the settings for Global Settings:
 24. Vertical sync: Off
 25. Virtual Realiyu pre-rendered frames: 1
 26. Vulkan/OpenGL present method: Auto
+27. G‑SYNC/FreeSync: Fullscreen (if exists)
 ```
 
-In NVIDIA App go to Graphics and in Global Settings
+Set Overdrive to “Normal / Fast” in your monitor OSD (reduces pixel response time).
+Next, in NVIDIA App go to Graphics and in Global Settings and change:
 
 ```bash
 1. DLSS Override - Model Presets: Latest
@@ -369,10 +371,11 @@ Transmit Power: Max
 
 ```
 
-Run this command in cmd admin:
+Run these commands in order in cmd admin:
 
 ```bash
-netsh interface tcp set global autotuninglevel=disabled
+netsh int tcp set global autotuninglevel=disabled
+ipconfig /flushdns
 ```
 
 ### 3. SSD
@@ -467,10 +470,10 @@ Then in cmd admin run these commands in order:
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v HwSchMode /t REG_DWORD /d 2 /f
 powercfg -h off
 
-Run this if you will not install malware:
+Run this if you will not install malware and want performance:
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
 
-Revert AntiSpyware setting:
+Revert AntiSpyware setting if you want more protection over malware:
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /f
 ```
 ### 2. Network
@@ -493,9 +496,11 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces
 Then chech every folder and find the one that has the same IPv4 that you noted as DchpIPAdress.
 Create a new DWORD (32-bit) Value and rename it "TCPAckFrequency".
 Create a new DWORD (32-bit) Value and rename it "TCPNoDelay".
+Create a new DWORD (32-bit) Value and rename it "TcpDelAckTicks"
 
 Set "TCPAckFrequency" to 1 as Hexadecimal.
 Set "TCPNoDelay"" to 1 as Hexadecimal.
+Set "TcpDelAckTicks" to 0 as Hexadecimal.
 
 ## Local Group Policy Editor
 If you use Windows 11 Home Edition, gpedit will not be installed. If you have gpedit installed, skip this. To install gpedit paste this in a .txt file:
@@ -615,6 +620,10 @@ sc query dps
 sc stop dps
 sc config dps start=disabled
 ```
+
+### 4. BIOS
+
+Shut down your computer, then open it, while it opens spam your BIOS key (mostly Del), then in BIOS find XMP/DOCP/EXPO and Enable it. Then select the highest profile. (e.g., Profile 1, Profile 2, or XMP Tweaked)
 
 ## Warning
 
