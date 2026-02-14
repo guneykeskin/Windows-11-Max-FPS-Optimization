@@ -378,6 +378,8 @@ netsh int tcp set global autotuninglevel=disabled
 ipconfig /flushdns
 ```
 
+Open Delivery Optimization Settings and disable "Allow downloands from other devices".
+
 ### 3. SSD
 Go to Control Panel > Power Options > Choose what the power buttons do
 From there click "Change settings that are currently unavailable" and untick "Turn on fast startup"
