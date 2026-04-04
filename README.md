@@ -616,7 +616,7 @@ All of these numbers should be Hexadecimal numbers.
 
 ### 3. Disabling DPS
 
-Run these three commands in order in a admin cmd prompt:
+Run these three commands in order in an admin cmd prompt:
 
 ```bash
 sc query dps
